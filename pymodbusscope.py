@@ -1,5 +1,5 @@
 """
-Script for autmating ModbusScope
+Script for automating ModbusScope
 """
 
 from pywinauto.application import Application
