@@ -36,12 +36,12 @@ class ModbusScope:
     def start_logging(self):
         ''' Start logging - Some registers must be added '''
         self.app['ModbusScope.*'].set_focus()
-        self.app['ModbusScope.*'].toolBar.StartLogging.click()
+        self.app['ModbusScope.*'].toolBar.StartLogging.click_input()
 
     def stop_logging(self):
         ''' Stop the current logging '''
         self.app['ModbusScope.*'].set_focus()
-        self.app['ModbusScope.*'].toolBar.StopLogging.click()
+        self.app['ModbusScope.*'].toolBar.StopLogging.click_input()
 
     def add_register(self, address):
         ''' Add a register at the given address '''
