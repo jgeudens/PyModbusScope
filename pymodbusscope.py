@@ -12,7 +12,7 @@ class ModbusScope:
     def __init__(self, path='ModbusScope.exe'):
         ''' Create an API object that can control a single instance of ModbusScope '''
         try:
-            self.app = Application(backend="uia").connect(title=u'ModbusScope')
+             self.app = Application(backend="uia").connect(title=u'ModbusScope', class_name = u'ModbusScope')
         except ElementNotFoundError:
             try:
                 self.app = Application(backend="uia").start(path)
