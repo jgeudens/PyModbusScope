@@ -22,11 +22,15 @@ class ModbusScope:
         self.app['ModbusScope.*'].set_focus()
         #self.app['ModbusScope.*'].print_control_identifiers()
 
-    def load_project(self, path):
+    def load_project(self, file, path=""):
         ''' Load a project (.mbs) file from the given absolute or relative path '''
         self.app['ModbusScope.*'].set_focus()
         self.app['ModbusScope.*'].toolBar.LoadProjectFile.click_input()
-        self.app['ModbusScope.*'].SelectMbsFile.BestandsNaamEdit.type_keys(path, with_spaces=True)
+        if path is not "":
+            self.app['ModbusScope.*'].SelectMbsFile.BestandsNaamEdit.type_keys(path, with_spaces=True)
+            send_keys("{ENTER}")
+
+        self.app['ModbusScope.*'].SelectMbsFile.BestandsNaamEdit.type_keys(file, with_spaces=True)
         send_keys("{ENTER}")
 
     def start_logging(self):
