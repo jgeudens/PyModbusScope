@@ -50,10 +50,6 @@ class ModbusScope:
         self.main_window.RegisterSettings.AddNewRegister.click_input()
         self.main_window.RegisterSettings.print_control_identifiers()
 
-    def clear_data(self):
-        ''' Clear the data '''
-        self.main_window.Menu2.View.print_control_identifiers()
-
     def about(self):
         ''' Open the About menu '''
         self.main_window.Menu2.menu_select("? -> About")
