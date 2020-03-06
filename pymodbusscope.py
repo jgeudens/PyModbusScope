@@ -57,3 +57,12 @@ class ModbusScope:
     def about(self):
         ''' Open the About menu '''
         self.main_window.Menu2.menu_select("? -> About")
+
+    def quit(self):
+        ''' Open the About menu '''
+        self.app.kill()
+
+    def take_screenshot(self, name):
+        ''' take screenshot '''
+        img = self.main_window.capture_as_image()
+        img.save(name)
